@@ -28,29 +28,59 @@ header {
   color: #fbf2c0;
 }
 
-main {
-  margin-top: 150px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
 .subtitle {
   text-transform: uppercase;
   color: #8d4e33;
   font-size: 1em;
   font-weight: lighter;
+  padding: 10px 0 5px 15px;
+}
+
+.container {
+  display: grid;
+  background-color: rgb(194, 183, 171);
+  padding: 5rem 2rem;
+  margin-top: 50px;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 10fr 4fr;
+  grid-template-areas: 
+  "items client"
+  "confirm confirm";
+}
+
+.items {
+  grid-area: items;
+}
+
+.name-pay-column {
+  grid-area: client;
+}
+
+.submit {
+  grid-area: confirm;
 }
 
 .items, .name-and-pay {
   background-color: #e4dbcf;
+  width: 90%;
+  box-shadow: 2px 2px 30px #5a584f;
+}
+
+.bolded {
+  font-weight: bold;
+}
+
+.order-details {
+  color: #8d4e33;
+  font-size: 0.8rem;
+  padding: 0;
+  margin: 5px 0 10px 0;
 }
 
 .items {
   display: grid;
-  width: 50%;
+  padding: 5px;
   height: 400px;
-  margin: 20px;
   grid-template-areas: 
     "head head head"
     "one name price"
@@ -67,7 +97,7 @@ main {
   grid-area: one;
 }
 
-.items > order-summary {
+.items > sumup {
   grid-area: name;
 }
 
@@ -75,9 +105,45 @@ main {
   grid-area: price;
 }
 
-.order-form {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  margin: 20px;
+/* #8d4e33 */
+
+.quantity, .price {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+.order-summary {
+  border-top: 2px solid #DDB892;
+  margin-bottom: 0;
+}
+
+legend {
+  color: #8d4e33;
+}
+
+.input {
+  border-radius: 30px;
+  width: 30%;
+}
+
+.name-and-pay {
+  height: 200px;
+}
+
+.left {
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+.button {
+  border-radius: 30px;
+  background-color: #43281c;
+  color: #e4dbcf;
+  font-size: 1rem;
 }
