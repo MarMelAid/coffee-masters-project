@@ -6,6 +6,7 @@
         <title>Coffee Masters</title>
         <link rel="stylesheet" href="styles.css">
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="icon" href="https://btholt.github.io/complete-intro-to-web-dev-v3/images/coffee_masters_logo.png">
     </head>
     <body>
         <header>
@@ -15,49 +16,63 @@
         <main>
             <section class="items">
                 <h2 class="subtitle">items</h2>
-                <p>1x</p>
-                <p class="left bolded">Cappuccino</p>
-                <p class="right">$3.35</p>
-                <p class="order-details">Lite foam</p>
-                <p>1x</p>
-                <p class="left bolded">Cappuccino</p>
-                <p>$3.85</p>
-                <p class="order-details">Lite milk</p>
-                <p class="order-details">Double espresso</p>
-                <p>1x</p>
-                <p class="left bolded">Croissant</p>
-                <p>$2.45</p>
-                <p class="order-details">Butter</p>
+                <div class="quantity">
+                    <p>1x</p>
+                </div>
+                <div class="order-summary">
+                    <p class="left bolded">Cappuccino</p>
+                    <p class="order-details">Lite foam</p>
+                </div>
+                <p class="price">$3.35</p>
+                <div class="quantity">
+                    <p>1x</p>
+                </div>
+                <div class="order-summary">
+                    <p class="left bolded">Cappuccino</p>
+                    <p class="order-details">Lite milk</p>
+                    <p class="order-details">Double espresso</p>
+                </div>
+                <p class="price">$3.85</p>
+                <div class="quantity">
+                    <p>1x</p>
+                </div>
+                <div class="order-summary">
+                    <p class="left bolded">Croissant</p>
+                    <p class="order-details">Butter</p>
+                </div>
+                <p class="price">$2.45</p>
             </section>
-            <section class="name-and-pay">
-                <h2 class="subtitle">name</h2>
-                <fieldset class="input">
-                    <legend>Name for order</legend>
-                    <input type="text" name="order-name" class="border" placeholder="Enter name" required>
-                </fieldset>
-            </section> 
-            <section class="name-and-pay">
-                <h2 class="subtitle">payment</h2>
-                <fieldset class="input">
-                    <legend>Card number</legend>
-                    <input class="border" name="card-no" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx" required>
-                </fieldset>
-                <fieldset class="input">
-                    <legend>CCV Number</legend>
-                    <input class="border" name="ccv" type="tel" inputmode="numeric" pattern="[0-9]{3}" autocomplete="cc-number" maxlength="3" placeholder="Enter CCV" required>
-                </fieldset>
-            </section>
-        </main>
-        <footer>
-            <section class="footer">
-                <p class="left">Subtotal:</p>
-                <p class="right">$9.65</p>
-                <p class="left">Tax:</p>
-                <p class="right">$0.82</p>
-                <p class="left bolded">Total:</p>
-                <p class="right bolded">$10.47</p>
-                <button class="button">Place order</button>
-            </section>
-        </footer>
+            <form action="" method="get" class="order-form">
+                <div class="name-pay-column">
+                    <section class="name-and-pay">
+                        <h2 class="subtitle">name</h2>
+                        <fieldset class="input">
+                            <legend>Name for order</legend>
+                            <input type="text" name="order-name" class="border" placeholder="Enter name" required>
+                        </fieldset>
+                        </section> 
+                    <section class="name-and-pay">
+                        <h2 class="subtitle">payment</h2>
+                        <fieldset class="input">
+                            <legend>Card number</legend>
+                            <input class="border" name="card-no" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19" placeholder="xxxx xxxx xxxx xxxx" required>
+                        </fieldset>
+                        <fieldset class="input">
+                            <legend>CCV Number</legend>
+                            <input class="border" name="ccv" type="tel" inputmode="numeric" pattern="[0-9]{3}" autocomplete="cc-number" maxlength="3" placeholder="Enter CCV" required>
+                        </fieldset>
+                    </section> 
+                </div>
+                <section class="submit">
+                    <p class="left">Subtotal:</p>
+                    <p class="right">$9.65</p>
+                    <p class="left">Tax:</p>
+                    <p class="right">$0.82</p>
+                    <p class="left bolded">Total:</p>
+                    <p class="right bolded">$10.47</p>
+                    <input type="submit" value="Place order" class="button">
+                </section>
+            </form>
+        </main>   
     </body>
 </html>

@@ -1,4 +1,83 @@
 * {
   box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
 }
 
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  height: 3.5rem;
+  background-color: #43281c;
+}
+
+.logo {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 5px;
+}
+
+.title {
+  font-size: 1.3rem;
+  color: #fbf2c0;
+}
+
+main {
+  margin-top: 150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.subtitle {
+  text-transform: uppercase;
+  color: #8d4e33;
+  font-size: 1em;
+  font-weight: lighter;
+}
+
+.items, .name-and-pay {
+  background-color: #e4dbcf;
+}
+
+.items {
+  display: grid;
+  width: 50%;
+  height: 400px;
+  margin: 20px;
+  grid-template-areas: 
+    "head head head"
+    "one name price"
+    "one name price"
+    "one name price";
+    grid-template-columns: 1fr 10fr 3fr;
+}
+
+.items > h2 {
+  grid-area: head;
+}
+
+.items > quantity {
+  grid-area: one;
+}
+
+.items > order-summary {
+  grid-area: name;
+}
+
+.items > price {
+  grid-area: price;
+}
+
+.order-form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: 20px;
+}
